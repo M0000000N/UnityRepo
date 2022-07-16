@@ -14,7 +14,7 @@ public class AttactRange : MonoBehaviour
 
             Vector3 cross = Vector3.Cross(transform.forward, bulletSpawner.target.position);
             Debug.Log(dot);
-            if (0f < dot && dot < 0.5f && cross.y < 0f)
+            if (0f < dot && dot < Mathf.Cos(30 * Mathf.PI / 180) && cross.y < 0f)
             {
                 bulletSpawner.isTrigger = true;
             }
